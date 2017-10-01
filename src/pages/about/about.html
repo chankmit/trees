@@ -1,11 +1,22 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar  color="sgreen">
     <ion-title>
-      About
+      ข้อมูลพันธุกรรมพืช
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content> 
+  <ion-item-group>
+    <!--
+    <ion-item-divider color="sgreen"><ion-icon name="ios-leaf-outline"></ion-icon> แบ่งข้อมูลตามวงศ์พืช</ion-item-divider>
+    -->
+    <ion-list-header>ข้อมูลพันธุกรรมพืชแบ่งตามวงศ์ของพืช</ion-list-header>
+    <ion-item *ngFor="let family of familys">  
+      <ion-icon name="ios-menu-outline" item-left></ion-icon>
+      <div (click)="viewFamily(family)">
+      <h2>{{family.pf_name_en}}</h2><p>{{family.pf_name_th}} </p>
+      </div>
+    </ion-item> 
+  </ion-item-group> 
 </ion-content>

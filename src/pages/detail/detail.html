@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="sgreen">
+    <ion-title>
+      {{item.plant_name}} ({{item.plant_name_basic}})
+    </ion-title>
+  </ion-navbar> 
+</ion-header>
+
+<ion-content> 
+<div item-left *ngIf="item.img_name != NULL"><img src="http://www.rbnrds.rbru.ac.th/uploads/{{item.img_name}}" style="max-width: 100%;"></div>
+<div item-left *ngIf="item.img_name == NULL"><img src="http://www.rbnrds.rbru.ac.th/images/icon.png" style="max-width: 100%;"></div>
+<ion-card> 
+  <ion-card-content>
+    <ion-card-title> ชื่อพื้นเมือง </ion-card-title>
+    <p> {{item.plant_name}} </p>
+    <ion-card-title> ชื่อวิทยาศาสตร์</ion-card-title>
+    <p> {{item.plant_name_science}} </p>
+    <ion-card-title> ชื่อสามัญ</ion-card-title>
+    <p> {{item.plant_name_basic}} </p>
+    <ion-card-title> วงศ์พืช</ion-card-title>
+    <p> {{item.pf_name_en}} ({{item.pf_name_th}}) </p>
+  </ion-card-content>
+</ion-card> 
+<ion-card> 
+  <ion-card-content>
+    <ion-card-title> การกระจายพันธ์ </ion-card-title>
+    <p> {{item.plant_spread}} </p>
+    <ion-card-title> การขยายพันธ์</ion-card-title>
+    <p> {{item.plant_expanse}} </p>
+    <ion-card-title> ลักษณะต้น</ion-card-title>
+    <p> {{item.plant_bole}} </p>
+    <ion-card-title> ลักษณะใบ</ion-card-title>
+    <p> {{item.plant_leaves}}</p>
+    <ion-card-title> ลักษณะดอก</ion-card-title>
+    <p> {{item.plant_flower}}</p>
+    <ion-card-title> ลักษณะผล</ion-card-title>
+    <p> {{item.plant_fruit}}</p>
+    <ion-card-title> ลักษณะเมล็ด</ion-card-title>
+    <p> {{item.plant_seed}}</p>
+  </ion-card-content>
+</ion-card>
+<ion-card> 
+  <ion-card-content>
+    <ion-card-title> นิเวศวิทยา</ion-card-title>
+    <p> {{item.plant_ecology}} </p>
+    <ion-card-title> ประโยชน์</ion-card-title>
+    <p> {{item.plant_use}} </p>
+    <ion-card-title> เอกสารหลัก</ion-card-title>
+    <p> {{item.plant_ref}} </p>
+    <ion-card-title> ผู้ศึกษา</ion-card-title>
+    <p> {{item.plant_find}}</p>
+    <ion-card-title> สถานที่พบ</ion-card-title>
+    <p> {{item.plant_place}}</p>
+    <ion-card-title> วันที่ศึกษา</ion-card-title>
+    <p> {{item.plant_find_date}}</p>
+    <ion-card-title> ผู้ตรวจ</ion-card-title>
+    <p> {{item.plant_confirm}}</p>
+  </ion-card-content>
+</ion-card>
+<ion-card> 
+  <ion-card-content>
+    <ion-card-title> ผู้บันทึก</ion-card-title>
+    <p> {{item.admin_id}} </p>
+    <ion-card-title> วันที่บันทึก</ion-card-title>
+    <p> {{item.plant_insert_date}} </p> 
+  </ion-card-content>
+</ion-card>
+
+</ion-content> 

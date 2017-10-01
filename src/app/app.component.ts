@@ -4,9 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { WuncaService } from './services/wunca.service';
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers : [WuncaService]
 })
 export class MyApp {
   rootPage:any = TabsPage;

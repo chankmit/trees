@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="sgreen">
+    <ion-title>{{family.pf_name_en}} ({{family.pf_name_th}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content> 
+  <ion-list>
+    <ion-list-header>ข้อมูลประจำ "{{family.pf_name_en}} ({{family.pf_name_th}}"</ion-list-header>
+    <ion-item *ngFor="let item of items">
+      <p item-left *ngIf="item.img_name != NULL" (click)="viewItem(item)"><img src="http://www.rbnrds.rbru.ac.th/uploads/{{item.img_name}}" style="max-width: 100px;"></p>
+      <p item-left *ngIf="item.img_name == NULL" (click)="viewItem(item)"><img src="http://www.rbnrds.rbru.ac.th/images/icon.png" style="max-width: 100px;"></p>
+      <h2>{{item.plant_name}} ({{item.plant_name_basic}})</h2>
+      <p class="item">{{item.plant_bole}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
